@@ -27,6 +27,14 @@ app.use(
     })
 );
 
+app.get("/", (req, res) => {
+    res.send("Welcome to the Task Manager API");
+});
+
+app.get("/home", (req, res) => {
+    res.send("Welcome to the Task Manager Home Page");
+});
+
 app.use(express.json());
 
 app.use(morgan("dev"));
